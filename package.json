@@ -1,0 +1,22 @@
+{
+  "name": "email-to-ethereum-address",
+  "version": "1.0.0",
+  "description": "Email to Ethereum address directory.",
+  "main": "src/EmailToEthereumAddress.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nventify/EthereumEmailToAddress.git"
+  },
+  "author": "Nicholas Pettas <nick@nventify.com>",
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/Nventify/EthereumEmailToAddress/issues"
+  },
+  "homepage": "https://github.com/Nventify/EthereumEmailToAddress#readme",
+  "dependencies": {
+    "web3": "^1.0.0-beta.34"
+  }
+}
