@@ -109,7 +109,7 @@ class EmailToEthereumAddress {
      * @param email
      * @returns {Promise<*>}
      */
-    async getRecord(email) {
+    async getAccount(email) {
         if (typeof email === 'undefined') {
             throw new Error("missing email parameter");
         }
