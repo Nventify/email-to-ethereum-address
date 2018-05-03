@@ -1,6 +1,6 @@
 {
   "name": "email-to-ethereum-address",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Email to Ethereum address directory.",
   "main": "dist/EmailToEthereumAddress.js",
   "scripts": {
