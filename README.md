@@ -17,7 +17,7 @@ npm run build
 
 # Usage
 
-## Node
+## Node (ES6)
 
 ```javascript
 const EmailToEthereumAddress = require('email-to-ethereum-address');
@@ -88,7 +88,6 @@ emailToEthereumAddress.getAccount("email@example.com").then(address => {
     };
 </script>
 </body>
-</html>
 ```
 
 ```javascript

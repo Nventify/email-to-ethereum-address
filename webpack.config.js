@@ -15,5 +15,19 @@ module.exports = {
         new webpack.ProvidePlugin({
             EmailToEthereumAddress: 'EmailToEthereumAddress'
         })
+    ],
+    module: {
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          options: {
+              cacheDirectory:true
+          }
+        }
+      }
     ]
+  }
 };

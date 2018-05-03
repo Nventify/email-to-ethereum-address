@@ -31,9 +31,17 @@ const CONTRACT_ABI = [{
 
 class EmailToEthereumAddress {
 
-    constructor(web3, account) {
-        this.myWeb3 = this.initializeWeb3(web3);
-        this.contract = this.initializeContract(account)
+    /**
+     * The EmailToEthereumAddress class constructor.
+     *
+     * @constructor
+     * @param web3Provider - The injected web3 provider.
+     * @param account - The address transactions should be sent from.
+     * @param [options] - Optional abi and address object.
+     */
+    constructor(web3Provider, account, options = {}) {
+        this.myWeb3 = this.initializeWeb3(web3Provider);
+        this.contract = this.initializeContract(account, options)
     }
 
     /**
@@ -53,14 +61,20 @@ class EmailToEthereumAddress {
      * Initialize the web3 smart contract
      *
      * @param account - The address transactions should be sent from.
+     * @param [options] - Optional abi and address object.
      * @returns {Contract}
      */
-    initializeContract(account) {
+    initializeContract(account, options = {}) {
         if (typeof account === 'undefined') {
             throw new Error("missing account parameter");
         }
 
-        return new this.myWeb3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS, {
+        const defaultOptions = Object.assign({}, {
+            abi: CONTRACT_ABI,
+            from: CONTRACT_ADDRESS
+        }, options);
+
+        return new this.myWeb3.eth.Contract(defaultOptions.abi, defaultOptions.from, {
             gasPrice: GAS,
             from: account
         });
