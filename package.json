@@ -2,7 +2,7 @@
   "name": "email-to-ethereum-address",
   "version": "1.0.1",
   "description": "Email to Ethereum address directory.",
-  "main": "src/EmailToEthereumAddress.js",
+  "main": "dist/EmailToEthereumAddress.js",
   "scripts": {
     "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
