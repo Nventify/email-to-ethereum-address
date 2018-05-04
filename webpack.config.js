@@ -1,13 +1,14 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
+const clientConfig = {
     mode: 'production',
+    target: 'web',
     performance: {hints: false},
-    entry: './src/EmailToEthereumAddress.js',
+    entry: './lib/EmailToEthereumAddress.js',
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'EmailToEthereumAddress.js',
+    path: path.resolve(__dirname, 'dist'),
+        filename: 'EmailToEthereumAddress.web.js',
         libraryTarget: 'var',
         library: 'EmailToEthereumAddress'
     },
@@ -17,17 +18,17 @@ module.exports = {
         })
     ],
     module: {
-    rules: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        use: {
-          loader: "babel-loader",
-          options: {
-              cacheDirectory:true
-          }
-        }
-      }
-    ]
-  }
+        rules: [{
+            test: /\.js$/,
+            exclude: path.resolve(__dirname, 'node_modules'),
+            use: {
+                loader: "babel-loader",
+                options: {
+                    cacheDirectory: true
+                }
+            }
+        }]
+    }
 };
+
+module.exports = [clientConfig];

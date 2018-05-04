@@ -12,6 +12,9 @@ npm install email-to-ethereum-address
 # Build (from source)
 ```bash
 npm install
+
+// Bundle for web browser use.
+// Outputs to dist/EmailToEthereumAddress.web.js
 npm run build
 ```
 
@@ -27,9 +30,9 @@ const Web3 = require("web3");
 const FROM_ACCOUNT = "0x0000000000000000000000000000000000000000";
 
 // Initialize your web3 provider.
-const web3 = new Web3.providers.WebsocketProvider("http://localhost:8545");
+const web3 = new Web3.providers.HttpProvider("http://localhost:8545");
 
-// Initial the EmailToEthereumAddress library.
+// Initialize the EmailToEthereumAddress library.
 // Pass your web3 provider and account.
 const emailToEthereumAddress = new EmailToEthereumAddress(web3, FROM_ACCOUNT);
 
@@ -43,7 +46,6 @@ emailToEthereumAddress.requestAddRecord("email@example.com").then(receipt => {
 emailToEthereumAddress.getAccount("email@example.com").then(address => {
     console.log("Address: " + address);
 });
-
 ```
 
 ## Web
@@ -51,7 +53,7 @@ emailToEthereumAddress.getAccount("email@example.com").then(address => {
 ```html
 <html>
 <head>
-    <script src="dist/EmailToEthereumAddress.js"></script>
+    <script src="dist/EmailToEthereumAddress.web.js"></script>
 </head>
 </html>
 <body>
