@@ -92,7 +92,29 @@ emailToEthereumAddress.getAccount("email@example.com").then(address => {
 </body>
 ```
 
-```javascript
+# Samples
 
+See the samples folder for both node.js and web examples.
 
+## Node 
+
+`Before running these samples, please modify your email and Ethereum addresses within the scripts.`
+
+```bash
+# Get account
+node samples/node/get_account.js
+
+# Request Add Record
+node samples/node/request_add_record.js
 ```
+
+## Web
+
+`Before running these samples, please modify your email address in the HTML file.`
+
+Open the HTML file in a web3 compatible browser.
+- samples/web/get_account.html
+- samples/web/request_add_record.html
+
+# Live Demo
+Please visit [here](https://whois.nventify.com/).

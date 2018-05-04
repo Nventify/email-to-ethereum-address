@@ -7,6 +7,8 @@
 <script>
     window.onload = function () {
 
+        var EMAIL_ADDRESS = 'email@example.com'; // The email address with which to request a new record.
+
         // Verify the browser has web3 injected.
         if (typeof web3 !== 'undefined') {
 
@@ -22,7 +24,7 @@
                     var emailToEthereumAddress = new EmailToEthereumAddress(web3.currentProvider, myAccount);
 
                     // Lookup address from email.
-                    emailToEthereumAddress.getAccount("email@example.com", function (address) {
+                    emailToEthereumAddress.getAccount(EMAIL_ADDRESS, function (address) {
                         console.log(address);
                     });
                 }
