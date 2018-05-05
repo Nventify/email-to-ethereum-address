@@ -2,7 +2,7 @@
 
 An email to Ethereum address directory Web3 library. This library requires a Web3 compatible client.
 
-`Note: This library currently runs on the Ethereum ROPSTEN (Revival) TESTNET and is indented for demonstration purposes only.`
+`Note: This library currently runs on the Ethereum ROPSTEN (Revival) TESTNET and is intended for demonstration purposes only.`
 
 # Install
 ```bash
