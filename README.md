@@ -4,6 +4,8 @@ An email to Ethereum address directory Web3 library. This library requires a Web
 
 `Note: This library currently runs on the Ethereum ROPSTEN (Revival) TESTNET and is intended for demonstration purposes only.`
 
+![Workflow Diagram](images/workflow.png)
+
 # Install
 ```bash
 npm install email-to-ethereum-address
