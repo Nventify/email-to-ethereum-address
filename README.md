@@ -1,8 +1,9 @@
 # Email to Ethereum Address
 
-An email to Ethereum address directory Web3 library. This library requires a Web3 compatible client.
+An email to Ethereum address directory Web3 library. 
+This library is a Web3js wrapper which manages interactions with an Ethereum smart contract application. 
 
-`Note: This library currently runs on the Ethereum ROPSTEN (Revival) TESTNET and is intended for demonstration purposes only.`
+`Note: This library currently runs on the Ethereum ROPSTEN (Revival) TESTNET and is intended for demonstration purposes only. This library requires a Web3 compatible client.`
 
 ![Workflow Diagram](images/workflow.png)
 
